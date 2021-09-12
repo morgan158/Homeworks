@@ -1,21 +1,22 @@
-public class User {
+class User {
 
     private String password;
     private String email;
 
-    public String getPassword() {
+
+    String getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
+    void setPassword(String password) {
         this.password = password;
     }
 
-    public String getEmail() {
+    String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    void setEmail(String email) {
         this.email = email;
     }
 }
