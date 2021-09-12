@@ -13,8 +13,8 @@ public class UserAuthorization implements UsersService {
     @Override
     public void signUp(String email, String password) {
         User user = new User();
-        String patternEmail = "[a-zA-Z0-9]@[a-z].[a-z]";
-        String patternPassword = "[a-zA-Z0-9]{8,}";
+        String patternEmail = "[a-zA-Z0-9]+@[a-z]+.[a-z]+"; // заранее прошу прощения за синтаксис:)
+        String patternPassword = "[a-zA-Z[0-9]]{8,}";       // регулярные выражения для проверки валидности адреса и пароля
 
         /*
         Сначала проверяем, правильный ли адрес почты. Если нет, выбрасываем исключение.
@@ -40,6 +40,7 @@ public class UserAuthorization implements UsersService {
     }
 
     /*
+    Метод signIn проверяет, есть ли пользователь в списке, и выводит сообщение, если есть.
      */
 
     @Override
