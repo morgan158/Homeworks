@@ -3,7 +3,7 @@ import java.util.regex.Pattern;
 
 public class UserAuthorization implements UsersService {
 
-    ArrayList<User> users = new ArrayList<User>();
+    ArrayList<User> users = new ArrayList<>();
 
     /*
      Метод signUp, наверное, лучше бы реализовать в отдельном классе для регистрации пользователей,
