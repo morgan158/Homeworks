@@ -9,20 +9,18 @@ public class Main5 {
 
         Scanner scanner = new Scanner(System.in);
 
-        int c = 0;
 
-//        while (c < 0) {
-//            String email = scanner.nextLine();
-//            String password = scanner.nextLine();
-//
-//            usersService.signUp(email, password);
-//            c++;
-//        }
+        usersService.signUp("ss", "ss");
+        usersService.signUp("sdsd", "sdsd");
+        usersService.signUp("ee", "ee");
+        
+
 
         System.out.println(usersRepository.count());
         System.out.println(usersRepository.findAll().toString());
-        System.out.println(usersRepository.existsByEmail("dfdf"));
-        System.out.println(usersRepository.findByEmail(""));
-        usersRepository.update(new User("", "dfdf111"));
+        System.out.println(usersRepository.existsByEmail("ee"));
+        System.out.println(usersRepository.findByEmail("ss"));
+        usersRepository.update(new User("sdsd", "dfdf111"));
+        usersRepository.delete(new User("ss", "ss"));
     }
 }

@@ -59,13 +59,11 @@ public class UsersRepositoryFileImpl implements UsersRepository {
     public List<User> findAll() {
         List<User> listUsers = new ArrayList<>();
         try (Scanner scanner = new Scanner(new FileInputStream(fileName))) {
-//            int id = 1;
             while (scanner.hasNext()){
                 String stringUser = scanner.nextLine();
                 User user = new User(stringUser.substring(stringUser.indexOf('|') + 1, stringUser.lastIndexOf('|')),
                                     stringUser.substring(stringUser.lastIndexOf('|')+1));
-//                user.setId(id);
-//                id++;
+
                 listUsers.add(user);
             }
             return listUsers;
@@ -84,7 +82,8 @@ public class UsersRepositoryFileImpl implements UsersRepository {
             throw new IllegalArgumentException(e);
         }
         for (User userOfList : users) {  // заново заполняем всеми объектами, кроме указанного в параметре метода
-            if (!user.getId().equals(userOfList.getId())) { // проверяем эквивалентность id
+            if (!(user.getEmail().equals(userOfList.getEmail()) &&
+                    user.getPassword().equals(userOfList.getPassword()))) { // проверяем эквивалентность id
                 this.save(userOfList);
             }
         }
