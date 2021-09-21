@@ -1,0 +1,7 @@
+А233ВВ|Camry|yellow|40000|750000
+Т888ЛЛ|Logan|black|33000|300000
+У222ЗЗ|Lada21010|white|78000|25000
+А999АА|Galendwagen|gold|12000|3000000
+Р888ЛЛ|Camry|gray|45000|790000
+Е918КК|Camry|green|23000|1490000
+Г909ЫЫ|Duster|blue|0|1000000
