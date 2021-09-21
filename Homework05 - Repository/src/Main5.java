@@ -10,9 +10,9 @@ public class Main5 {
         Scanner scanner = new Scanner(System.in);
 
 
-        usersService.signUp("ss", "ss");
-        usersService.signUp("sdsd", "sdsd");
-        usersService.signUp("ee", "ee");
+//        usersService.signUp("ss", "ss");
+//        usersService.signUp("sdsd", "sdsd");
+//        usersService.signUp("ee", "ee");
 
 
 
