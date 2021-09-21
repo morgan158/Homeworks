@@ -16,7 +16,7 @@ public class CarsRepository {
     }
 
     private final static Function<String, Car> carMapFunction = line -> {
-        String[] parts = line.split("|");
+        String[] parts = line.split("\\|");
 
         String number = parts[0];
         String model = parts[1];
