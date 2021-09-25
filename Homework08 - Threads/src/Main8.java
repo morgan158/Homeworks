@@ -58,31 +58,5 @@ public class Main8 {
 
 
 
-
-//        Это работает только в однопоточном варианте
-//        
-//        ThreadLoad threadLoad = new ThreadLoad("thread1_");
-//        ThreadLoad threadLoad1 = new ThreadLoad("thread2_");
-//        ThreadLoad threadLoad2 = new ThreadLoad("thread3_");
-//        ThreadLoad threadLoad3 = new ThreadLoad("thread4_");
-//        ThreadLoad threadLoad4 = new ThreadLoad("thread5_");
-//        ThreadLoad threadLoad5 = new ThreadLoad("thread6_");
-//        ThreadLoad threadLoad6 = new ThreadLoad("thread7_");
-//        ThreadLoad threadLoad7 = new ThreadLoad("thread8_");
-//        ThreadLoad threadLoad8 = new ThreadLoad("thread9_");
-//        ThreadLoad threadLoad9 = new ThreadLoad("thread10_");
-//       
-//        
-//        threadLoad.start();
-//        threadLoad1.start();
-//        threadLoad2.start();
-//        threadLoad3.start();
-//        threadLoad4.start();
-//        threadLoad5.start();
-//        threadLoad6.start();
-//        threadLoad7.start();
-//        threadLoad8.start();
-//        threadLoad9.start();
-
     }
 }
