@@ -45,17 +45,16 @@ public class Main8 {
                 for (Future<Long> task : tasks) {
                     try {
                         result = result + task.get();
+
                     } catch (InterruptedException | ExecutionException e) {
                         throw new IllegalArgumentException();
                     }
                 }
                 System.out.println(result);
+                executorService.shutdown();
                 return;
             }
         }
-
-
-
 
 
     }
