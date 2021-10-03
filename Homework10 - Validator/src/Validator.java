@@ -21,14 +21,21 @@ public class Validator {
                               //также по умолчанию - что числа в аннотациях находятся в разумных пределах
 
                 switch (field.getType().getSimpleName()) {
-                    case "int", "double", "float", "short", "byte", "long", "char" -> //можно дополнить wrapper-классами
-                            digit = Double.parseDouble(field.get(from).toString());
-                    case "boolean" -> digit = Boolean.parseBoolean(field.get(from).toString()) ? 1 : 0;
-                    case "String" -> digit = field.get(from).toString().length();
-                    default -> {
-                        System.out.println(Arrays.toString(field.get(from).getClass().getDeclaredFields()));
+                    case "int":
+                    case "char":
+                    case "double":
+                    case "float":
+                    case "short":
+                    case "byte":
+                    case "long":
+                        digit = Double.parseDouble(field.get(from).toString());
+                        break;
+                    case "boolean":
+                        digit = Boolean.parseBoolean(field.get(from).toString()) ? 1 : 0;
+                    case "String":
+                        digit = field.get(from).toString().length();
+                    default:
                         digit = field.get(from).getClass().getDeclaredFields().length;
-                    }
                 }
 
                 if (digit == notEmpty
