@@ -34,7 +34,6 @@ public class Validator {
                         digit = field.get(from).getClass().getDeclaredFields().length;
                 }
 
-                // По умолчанию считаю, что все перечисленные аннотации применяются к каждому полю
                 if (field.getAnnotation(NotEmpty.class) != null) {
                     int notEmpty = field.getAnnotation(NotEmpty.class).notEmpty();
                     if (digit == notEmpty) {
