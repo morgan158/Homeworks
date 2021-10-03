@@ -3,9 +3,9 @@ import java.util.ArrayList;
 public class Person {
     @NotEmpty @MinMaxLength
     String name;
-    @NotEmpty @MinMaxLength
+    @NotEmpty @Max
     int age;
-    @NotEmpty @MinMaxLength
+    @NotEmpty
     String profession;
 
     @NotEmpty  @MinMaxLength(min = @Min(min = 3))
