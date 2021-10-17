@@ -12,7 +12,7 @@ public class Config {
     public Config() {
         try {
             Properties properties = new Properties();
-            properties.load(new FileInputStream("resources\\threads.properties"));
+            properties.load(getClass().getResourceAsStream("/threads.properties"));
             this.driver = properties.getProperty("executor.threads.driver");
             this.user = properties.getProperty("executor.threads.user");
             this.password = properties.getProperty("executor.threads.password");
