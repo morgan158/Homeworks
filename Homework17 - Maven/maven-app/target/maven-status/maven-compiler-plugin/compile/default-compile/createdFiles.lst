@@ -1,0 +1,5 @@
+ru\pcs\config\Config.class
+ru\pcs\repositories\ProductsRepository.class
+ru\pcs\repositories\ProductsRepositoryJdbc.class
+ru\pcs\app\Main17.class
+ru\pcs\models\Product.class
