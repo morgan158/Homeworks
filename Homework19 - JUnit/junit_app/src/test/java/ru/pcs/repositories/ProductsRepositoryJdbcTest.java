@@ -23,7 +23,11 @@ class ProductsRepositoryJdbcTest {
     }
 
     @Test
-    public void test(){
+    public void testDatabase(){
         assertTrue(productsRepositoryJdbc.findAll(0, 5).size()>0);
+    }
+    @Test
+    public void checkName(){
+        assertTrue(productsRepositoryJdbc.findAll(0, 5).get(0).getName().length()<255);
     }
 }
