@@ -2,6 +2,7 @@ package ru.pcs.app;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ru.pcs.models.Product;
 import ru.pcs.repositories.ProductsRepository;
 import ru.pcs.repositories.ProductsRepositoryJdbc;
 import ru.pcs.config.Config;
@@ -12,6 +13,7 @@ import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
 
+import java.util.Optional;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -66,6 +68,47 @@ public class Main18 {
             });
         }
         service.shutdown();
+
+        /*
+        Закомментированы вызовы методов для тестирования
+         */
+        // Добавление нового товара
+
+//        Product product = new Product("Кустарники", "Черная смородина", 3000.0, 4, 10);
+//        productsRepository.save(product);
+//        System.out.println(product);
+//
+//        // Найти все (пагинация)
+//
+//        System.out.println(productsRepository.findAll(1, 5));
+//
+//        // Поиск по ID
+//
+//        System.out.println(productsRepository.findById(5L));
+//
+//        // Обновление данных о товаре
+//        Optional<Product> productOptional = productsRepository.findById(2L);
+//        productOptional.ifPresent(product1 -> {
+//            product1.setCategory("Хвойные");
+//            product1.setDiscount(0);
+//            product1.setStock(1);
+//            product1.setPrice(4000.0);
+//            product1.setName("Елка");
+//            productsRepository.update(product1);
+//            System.out.println(product1);
+//        });
+//
+//
+//
+//        System.out.println("Товар " + productsRepository.findById(37L).get().getId() + " будет удален");
+//
+//        // Удаление товара по ID
+//        productsRepository.deleteById(37L);
+//
+//        System.out.println("Товар " + product.getId() + " будет удален");
+//
+//        // Удаление товара по объекту (объект объявлен выше)
+//        productsRepository.delete(product);
 
     }
 }
